@@ -1,44 +1,311 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Django Blog</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design Bootstrap</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
-  <link href="css/style.css" rel="stylesheet">
-</head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="#">My Blog</a>
 
-<body>
+      <!-- Collapse button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#basicExampleNav"
+        aria-controls="basicExampleNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <!-- Start your project here-->
-  <div style="height: 100vh">
-    <div class="flex-center flex-column">
-      <h1 class="animated fadeIn mb-2">Material Design for Bootstrap</h1>
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
 
-      <h5 class="animated fadeIn mb-1">Thank you for using our product. We're glad you're with us.</h5>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Dropdown</a
+            >
+            <div
+              class="dropdown-menu dropdown-primary"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <!-- Links -->
 
-      <p class="animated fadeIn text-muted">MDB Team</p>
-    </div>
-  </div>
-  <!-- /Start your project here-->
+        <form class="form-inline">
+          <div class="md-form my-0">
+            <input
+              class="form-control mr-sm-2"
+              type="text"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </div>
+        </form>
+      </div>
+      <!-- Collapsible content -->
+    </nav>
+    <!--/.Navbar-->
 
-  <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-</body>
+		<main class="container">
+			<!-- Start your project here-->
+			<div class="jumbotron jumbotron-fluid">
+				<div class="container">
+					<h2 class="display-4">My First Blog</h2>
+					<p class="lead">This is My First Blog.</p>
+				</div>
+			</div>
+			<!-- /Start your project here-->
 
+			<!-- Card deck -->
+			<div class="card-deck">
+				<!-- Card -->
+				<div class="card mb-4">
+					<!--Card image-->
+					<div class="view overlay">
+						<img
+							class="card-img-top"
+							src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+							alt="Card image cap"
+						/>
+						<a href="#!">
+							<div class="mask rgba-white-slight"></div>
+						</a>
+					</div>
+
+					<!--Card content-->
+					<div class="card-body">
+						<!--Title-->
+						<h4 class="card-title">Card title</h4>
+						<!--Text-->
+						<p class="card-text">
+							Some quick example text to build on the card title and make up the
+							bulk of the card's content.
+						</p>
+						<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+						<button type="button" class="btn btn-light-blue btn-md">
+							Read more
+						</button>
+					</div>
+				</div>
+				<!-- Card -->
+
+				<!-- Card -->
+				<div class="card mb-4">
+					<!--Card image-->
+					<div class="view overlay">
+						<img
+							class="card-img-top"
+							src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
+							alt="Card image cap"
+						/>
+						<a href="#!">
+							<div class="mask rgba-white-slight"></div>
+						</a>
+					</div>
+
+					<!--Card content-->
+					<div class="card-body">
+						<!--Title-->
+						<h4 class="card-title">Card title</h4>
+						<!--Text-->
+						<p class="card-text">
+							Some quick example text to build on the card title and make up the
+							bulk of the card's content.
+						</p>
+						<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+						<button type="button" class="btn btn-light-blue btn-md">
+							Read more
+						</button>
+					</div>
+				</div>
+				<!-- Card -->
+
+				<!-- Card -->
+				<div class="card mb-4">
+					<!--Card image-->
+					<div class="view overlay">
+						<img
+							class="card-img-top"
+							src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
+							alt="Card image cap"
+						/>
+						<a href="#!">
+							<div class="mask rgba-white-slight"></div>
+						</a>
+					</div>
+
+					<!--Card content-->
+					<div class="card-body">
+						<!--Title-->
+						<h4 class="card-title">Card title</h4>
+						<!--Text-->
+						<p class="card-text">
+							Some quick example text to build on the card title and make up the
+							bulk of the card's content.
+						</p>
+						<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+						<button type="button" class="btn btn-light-blue btn-md">
+							Read more
+						</button>
+					</div>
+				</div>
+				<!-- Card -->
+			</div>
+			<!-- Card deck -->
+		</main>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4">
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+            <!-- Content -->
+            <h5 class="text-uppercase">Footer Content</h5>
+            <p>
+              Here you can use rows and columns to organize your footer content.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none pb-3" />
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
+    <!-- MDB core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
+    ></script>
+  </body>
 </html>
