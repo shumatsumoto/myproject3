@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.generic import TemplateView, CreateView
+from django.views.generic import TemplateView, CreateView, DetailView
 from .models import Post
 from django.urls import reverse_lazy
 from .forms import PostForm
@@ -22,3 +22,7 @@ class PostCreate(CreateView):
 	model = Post
 	form_class = PostForm
 	success_url = reverse_lazy('myapp:index')
+
+
+class PostDetail(DetailView):
+	model = Post

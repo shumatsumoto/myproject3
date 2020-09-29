@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-9">
+		<div class="card mt-4 mb-4">
+			<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">
+			<div class="card-body">
+				<h4 class="card-title">{{ object.title }}</h4>
+				<p class="card-text">{{ object.content }}</p>
+				<a href="#!" class="btn btn-primary">Go somewhere</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
