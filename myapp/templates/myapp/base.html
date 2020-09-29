@@ -78,7 +78,7 @@
             >
               {% if request.user.is_authenticated %}
                 <a class="dropdown-item">{{ request.user }}</a>
-                <a class="dropdown-item" href="">ログアウト</a>
+                <a class="dropdown-item" href="{% url 'myapp:logout' %}">ログアウト</a>
               {% else %}
                 <a class="dropdown-item" href="{% url 'myapp:login' %}">ログイン</a>
                 <a class="dropdown-item" href="">ユーザー登録</a>
