@@ -2,10 +2,21 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+class Category(models.Model):
+	name = models.CharField('カテゴリー名', max_length=50)
+	name_en = models.CharField('カテゴリー名：英語', max_length=10)
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
+
+	def __str__(self):
+			return self.name
+
+
 class Post(models.Model):
 	author = models.ForeignKey(User, on_delete=models.PROTECT, blank=False)
 	title = models.CharField('タイトル', max_length=50)
 	content = models.TextField('内容', max_length=1000)
+	category = models.ForeignKey('Category', on_delete=models.PROTECT)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
