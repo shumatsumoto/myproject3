@@ -4,7 +4,11 @@
 <div class="row">
 	<div class="col-md-9">
 		<div class="card mt-4 mb-4">
-			<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">
+			{% if object.thumbnail %}
+				<img class="card-img-top" src="{{ object.thumbnail.url }}" alt="{{ object.title }}">
+			{% else %}
+				<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">
+			{% endif %}
 			<div class="card-body">
 				<h4 class="card-title">{{ object.title }}</h4>
 				<p class="card-text">{{ object.content }}</p>
@@ -12,6 +16,21 @@
 				<a href="{% url 'myapp:post_update' object.pk %}" class="btn btn-primary">更新</a>
 				<a href="{% url 'myapp:post_delete' object.pk %}" class="btn btn-danger">削除</a>
 			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="card mt-4 mb-4">
+			<div class="card-body">
+				<h5 class="card-title">{{ object.category }}</h5>
+				<p>このカテゴリの他の記事</p>
+			</div>
+			<ul class="list-group">
+				{% for item in category_posts %}
+					<li class="list-group-item">
+						<a href="{% url 'myapp:post_detail' item.pk %}">{{ item.title }}</a>
+					</li>
+				{% endfor %}
+			</ul>
 		</div>
 	</div>
 </div>
