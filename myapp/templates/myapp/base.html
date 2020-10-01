@@ -108,15 +108,15 @@
         </ul>
         <!-- Links -->
 
-        <form class="form-inline">
-          <div class="md-form my-0">
-            <input
-              class="form-control mr-sm-2"
-              type="text"
-              placeholder="Search"
-              aria-label="Search"
-            />
-          </div>
+        <form action="{% url 'myapp:search' %}" class="form-inline" method="POST">
+          {% csrf_token %}
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            name="freeword"
+          />
         </form>
       </div>
       <!-- Collapsible content -->
