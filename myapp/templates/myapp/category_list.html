@@ -11,7 +11,7 @@
 		<div class="col-md-4">
 			<div class="card mb-4">
 				<div class="card-body">
-					<h4 class="card-title"><a href="{% url 'myapp:category_detail' category.name_en %}">{{ category.name }}</a></h4>
+					<h4 class="card-title"><a href="{% url 'myapp:category_detail' category.name_en %}">{{ category.name }}</a> <small>({{ category.post_count }})</small></h4>
 					<hr>
 					{% for post in category.post_set.all|slice:"3" %}
 						<p><a href="{% url 'myapp:post_detail' post.pk %}" style="color: #000;">{{ post.title }}</a></p>
